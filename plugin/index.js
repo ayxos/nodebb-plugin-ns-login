@@ -46,7 +46,7 @@
                         }
                     }),
                     function (req, res, next) {
-                        console.log('[API][plugins/ns-login] Requesting external login, username/email: %d', req.body.username);
+                        console.log('[API][plugins/ns-login] Requesting external login, username/email: ' + req.body.username);
                         var username = req.body.username, 
                             userSlug = null, 
                             isEmail, 
@@ -70,7 +70,8 @@
                         isEmail = validator.isEmail(username);
                         userSlug = isEmail ? username : utils.slugify(username);
                         method = isEmail ? 'getUidByEmail' : 'getUidByUserslug';
-
+                        
+                        console.log('[API][plugins/ns-login] Requesting external login, params: ' + isEmail + ' ' + userSlug);
                         async.waterfall([
                             async.apply(user[method], userSlug),
                             function (_uid, next) {
