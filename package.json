@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      "nodebb-plugin-ns-login@2.0.2",
+      "/var/www/nodebb"
+    ]
+  ],
+  "_from": "nodebb-plugin-ns-login@2.0.2",
+  "_id": "nodebb-plugin-ns-login@2.0.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/nodebb-plugin-ns-login",
+  "_nodeVersion": "5.8.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/nodebb-plugin-ns-login-2.0.2.tgz_1460083699746_0.7884337492287159"
+  },
+  "_npmUser": {
+    "email": "nicolas@siver.im",
+    "name": "nicolassiver"
+  },
+  "_npmVersion": "3.7.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "nodebb-plugin-ns-login",
+    "raw": "nodebb-plugin-ns-login@2.0.2",
+    "rawSpec": "2.0.2",
+    "scope": null,
+    "spec": "2.0.2",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/nodebb-plugin-ns-login/-/nodebb-plugin-ns-login-2.0.2.tgz",
+  "_shasum": "66ee63fae6aa0b0e0d2b0714d673a708ddf4ce5a",
+  "_shrinkwrap": null,
+  "_spec": "nodebb-plugin-ns-login@2.0.2",
+  "_where": "/var/www/nodebb",
+  "author": {
+    "name": "Nicolas Siver"
+  },
+  "bugs": {
+    "url": "https://github.com/NicolasSiver/nodebb-plugin-ns-login/issues"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "express-brute": "^0.6.0",
+    "moment": "^2.12.0",
+    "validator": "^6.2.0"
+  },
+  "description": "External login check for your NodeBB. Provides API endpoint for user login.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "66ee63fae6aa0b0e0d2b0714d673a708ddf4ce5a",
+    "tarball": "https://registry.npmjs.org/nodebb-plugin-ns-login/-/nodebb-plugin-ns-login-2.0.2.tgz"
+  },
+  "gitHead": "fedc2aabd025059e5fb16fafa9a8a02d00668b5f",
+  "homepage": "https://github.com/NicolasSiver/nodebb-plugin-ns-login#readme",
+  "keywords": [
+    "check",
+    "login",
+    "nodebb",
+    "plugin",
+    "secure",
+    "simple"
+  ],
+  "license": "MIT",
+  "main": "./plugin/index.js",
+  "maintainers": [
+    {
+      "name": "nicolassiver",
+      "email": "nicolas@siver.im"
+    }
+  ],
+  "name": "nodebb-plugin-ns-login",
+  "nbbpm": {
+    "compatibility": "^0.9.0 || ^1.x"
+  },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasSiver/nodebb-plugin-ns-login.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.0.2"
+}
