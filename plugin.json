@@ -5,10 +5,8 @@
   "url": "https://github.com/NicolasSiver/nodebb-plugin-ns-login",
   "library": "./plugin/index.js",
   "hooks": [
-    {
-      "hook": "static:app.load",
-      "method": "hooks.statics.load"
-    }
+    { "hook": "static:app.load", "method": "hooks.statics.load" },
+    { "hook": "filter:register.complete", "method": "hooks.statics.onRegisterComplete" }
   ],
   "staticDirs": {}
 }
