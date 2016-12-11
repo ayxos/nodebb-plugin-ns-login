@@ -59,10 +59,20 @@
                             password = req.body.password, 
                             uid = null, 
                             userObject = null;
+                        
+                        isEmail = validator.isEmail(username);
+                        // userSlug = isEmail ? username : utils.slugify(username);
+                        userSlug = username;
 
                         if (!username) {
                             return res.status(400).json({
-                                message: 'Username/Email is not provided, username/email and password are required fields'
+                                message: 'Email is not provided, email and password are required fields'
+                            });
+                        }
+                        
+                        if (!isEmail) {
+                            return res.status(400).json({
+                                message: 'Email provided is not a valid mail'
                             });
                         }
 
@@ -71,14 +81,11 @@
                                 message: 'Password is empty'
                             });
                         }
-
-                        isEmail = validator.isEmail(username);
-                        userSlug = isEmail ? username : utils.slugify(username);
-                        method = isEmail ? 'getUidByEmail' : 'getUidByUserslug';
+                        // method = isEmail ? 'getUidByEmail' : 'getUidByUserslug';
                         
                         console.log('[API][plugins/ns-login] Requesting external login, params: ' + isEmail + ' ' + userSlug);
                         async.waterfall([
-                            async.apply(user[method], userSlug),
+                            async.apply(user.getUidByEmail, userSlug),
                             function (_uid, next) {
                                 if (!_uid) return next(new Error('User ' + userSlug + ' does not exist'));
                                 uid = _uid;
