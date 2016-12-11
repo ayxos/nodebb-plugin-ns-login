@@ -110,6 +110,11 @@
                                     message: error.message
                                 });
                             }
+                            if (!user['email:confirmed'] || user['email:confirmed'] !== 1) {
+                                return res.status(403).json({
+                                    message: 'Email has not been confirmed'
+                                });
+                            }
                             console.log('[API][plugins/ns-login] Successful external login, uid: %d', uid);
                             // reset the failure counter so next time they log in they get 5 tries again before the delays kick in
                             req.brute.reset(function () {
