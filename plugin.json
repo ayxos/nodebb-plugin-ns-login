@@ -7,6 +7,7 @@
   "hooks": [
     { "hook": "static:app.load", "method": "hooks.statics.load" },
     { "hook": "filter:register.complete", "method": "hooks.statics.onRegisterComplete" }
+    { "hook": "action:user.email.confirmed", "method": "hooks.statics.onRegisterCofirmed" }
   ],
   "staticDirs": {}
 }
