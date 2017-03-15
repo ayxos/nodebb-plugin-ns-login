@@ -31,6 +31,11 @@
     //NodeBB list of Hooks: https://github.com/NodeBB/NodeBB/wiki/Hooks
     Plugin.hooks = {
         statics: {
+            onRegisterConfirmed: function(data, callback) {
+                console.log('register confirmed!');
+                data.referrer = 'https://interpretame.com';
+                callback(null, data);
+            },
             onRegisterComplete: function(data, callback) {
                 console.log('register completed!');
                 data.referrer = 'https://interpretame.com/login';
