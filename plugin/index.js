@@ -32,9 +32,8 @@
     Plugin.hooks = {
         statics: {
             onRegisterConfirmed: function(data, next) {
-                console.log('register confirmed!', next);
+                console.log('register confirmed!', data, next);
                 data.referrer = 'https://interpretame.com';
-                next();
             },
             load: function (params, callback) {
                 var router      = params.router,
